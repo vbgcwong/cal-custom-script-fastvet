@@ -15,6 +15,7 @@
     "prettier": "prettier --check **/*.ts",
     "prettier-fix": "npm run prettier -- --write **/*.ts",
     "test": "npx jest --rootDir=__tests__",
+    "update-version": "node ./shell/update-version.mjs",
     "watch-test": "npx jest --rootDir=__tests__ --watchAll"
   },
   "repository": {
