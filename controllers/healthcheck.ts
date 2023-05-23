@@ -27,5 +27,6 @@ export const healthcheck = (_: Request, res: Response) => {
   <h3>Message: <span style="font-weight: normal">Ok</span></h3>
   <h3>Current date: <span style="font-weight: normal">${currentDate}</span></h3>
   <h3>Current time: <span style="font-weight: normal">${currentTime}</span></h3>
+  <h3>Commit hash: <span style="font-weight: normal">${EnvConstants.COMMIT_HASH}</span></h3>
   `);
 };

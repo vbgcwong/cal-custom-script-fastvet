@@ -3,21 +3,21 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
-    "declaration": true,
+    "declaration": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "CommonJS",
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "outDir": "./dist",
+    "outDir": "./build",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
+    "target": "ES6"
   },
-  "include": ["controllers", "constants", "middlewares", "routes", "server.ts", "__tests__", "utils"]
+  "include": ["controllers", "constants", "middlewares", "routes", "server.ts", "__tests__", "utils", "docker/ecosystem.config.js", "package.json"]
 }
