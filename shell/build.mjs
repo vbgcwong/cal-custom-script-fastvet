@@ -91,8 +91,10 @@ try {
   shell.echo(`Error updating ${buildDir}/package.json with error ${e}`)
 }
 
-if (shell.exec(`docker build -f docker/Dockerfile.dev -t ${tagName}:v${appVersion} .`).code === SUCCESS) {
-  shell.echo(`Docker image generated: ${tagName}:v${appVersion}`)
+const updatedTagName = `${tagName}:v${appVersion}`
+
+if (shell.exec(`docker build -f docker/Dockerfile.${appEnv} -t ${updatedTagName} .`).code === SUCCESS) {
+  shell.echo(`Docker image generated: ${updatedTagName}`)
 } else {
   shell.echo(`Failed to generate the docker image: ${tagName}:v${appVersion}`)
 }
