@@ -14,9 +14,11 @@ env:
 
 jobs:
   increment_build_num:
-    name: Build & Deploy to ECR
+    name: Increment Build Version
     runs-on: ubuntu-latest
     environment: dev
+    permissions:
+      contents: write
 
     env:
       APP_VERSION: ${{ vars.APP_VERSION }}
