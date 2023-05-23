@@ -31,3 +31,15 @@ describe("EnvConstants.APP_ENV unit test", () => {
     });
   }
 });
+
+describe("EnvConstants.SERVER_URL unit test", () => {
+  it("should have SERVER_URL property", () => {
+    expect(EnvConstants).toHaveProperty("SERVER_URL");
+  });
+
+  it("should be localhost in development environment", () => {
+    if (process.env.APP_ENV === "development") {
+      expect(EnvConstants.SERVER_URL).toEqual("http://localhost");
+    }
+  });
+});
