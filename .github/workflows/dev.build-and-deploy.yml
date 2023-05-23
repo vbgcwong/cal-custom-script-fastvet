@@ -3,8 +3,8 @@ name: Build Image & Deploy to ECR/ECS
 on:
   push:
     branches:
-      #- dev
-      - jm-dev*
+      - dev
+      #- jm-dev*
     #paths-ignore:
       #- '.github/workflows/**'
 
