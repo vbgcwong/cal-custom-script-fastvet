@@ -1,0 +1,10 @@
+FROM node:19
+WORKDIR /exam-builder-backend
+
+# copy everything not excluded by .dockerignore to /exam-builder-backend
+COPY build/dev .
+RUN npm install
+EXPOSE 5000
+RUN npm install pm2 -g
+# CMD ["sleep", "infinity"]
+CMD ["pm2-runtime", "start", "docker/ecosystem.config.js"]
