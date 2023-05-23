@@ -3,8 +3,8 @@ name: Build Image & Deploy to ECR/ECS
 on:
   push:
     branches:
-      - dev
-      #- jm-dev*
+      #- dev
+      - jm-dev*
     #paths-ignore:
       #- '.github/workflows/**'
 
@@ -13,13 +13,10 @@ env:
   REPO_ID: ${{ secrets.REPO_ID }}
 
 jobs:
-  #build_image:
-  deploy_to_ecr:
+  increment_build_num:
     name: Build & Deploy to ECR
     runs-on: ubuntu-latest
     environment: dev
-    permissions:
-      contents: write
 
     env:
       APP_VERSION: ${{ vars.APP_VERSION }}
@@ -59,6 +56,21 @@ jobs:
       - id: update_package_app_version
         run: npm run update-version ${{ steps.bump_build_version.outputs.NEXT_BUILD }}
 
+
+  build_and_deploy_to_ecr:
+    name: Build & Deploy to ECR
+    needs: increment_build_num
+    if: needs.increment_build_num.result == 'success'
+    runs-on: ubuntu-latest
+    environment: dev
+    permissions:
+      contents: write
+
+    #env:
+      #APP_VERSION: ${{ vars.APP_VERSION }}
+      #BUILD: ${{ vars.BUILD }}
+
+    steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -73,7 +85,6 @@ jobs:
         
       - name: Build, tag, and push docker image to Amazon ECR
         id: build_image
-        if: steps.update_build_var.outcome == 'success'
         run: |
           npm install --legacy-bundling shelljs
           npm run build-dev ${{ secrets.ECR_REGISTRY }}/${{ vars.ECR_REPO }} ${{ vars.BUILD }}
@@ -81,7 +92,7 @@ jobs:
         
   #deploy_to_ecs:
     #name: Update ECS Service
-    #needs: deploy_to_ecr
+    #needs: build_and_deploy_to_ecr
     #runs-on: ubuntu-latest
     #environment: dev
 
