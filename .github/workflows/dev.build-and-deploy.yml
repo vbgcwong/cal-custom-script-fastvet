@@ -18,6 +18,8 @@ jobs:
     name: Build & Deploy to ECR
     runs-on: ubuntu-latest
     environment: dev
+    permissions:
+      contents: write
 
     env:
       APP_VERSION: ${{ vars.APP_VERSION }}
@@ -34,6 +36,17 @@ jobs:
           next_build="${APP_VERSION}-${next_build_num}"
           echo "NEXT_BUILD=$next_build" >> $GITHUB_OUTPUT
 
+      - id: tag_commit
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/builds/${{ steps.bump_build_version.outputs.NEXT_BUILD }}',
+              sha: context.sha
+            })
+
       - id: update_build_var
         uses: octokit/request-action@v2.x
         with:
@@ -45,17 +58,6 @@ jobs:
 
       - id: update_package_app_version
         run: npm run update-version ${{ vars.BUILD }}
-      
-      - id: tag_commit
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: 'refs/tags/builds/${{ vars.BUILD }}',
-              sha: context.sha
-            })
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
