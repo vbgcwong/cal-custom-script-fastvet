@@ -57,7 +57,7 @@ jobs:
           value: '${{ steps.bump_build_version.outputs.NEXT_BUILD }}'
 
       - id: update_package_app_version
-        run: npm run update-version ${{ vars.BUILD }}
+        run: npm run update-version ${{ steps.bump_build_version.outputs.NEXT_BUILD }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -73,13 +73,14 @@ jobs:
         
       - name: Build, tag, and push docker image to Amazon ECR
         id: build_image
+        if: steps.update_build_var.outcome == 'success'
         run: |
           npm install --legacy-bundling shelljs
           npm run build-dev ${{ secrets.ECR_REGISTRY }}/${{ vars.ECR_REPO }} ${{ vars.BUILD }}
           docker push ${{ secrets.ECR_REGISTRY }}/${{ vars.ECR_REPO }}:v${{ vars.BUILD }}
         
   #deploy_to_ecs:
-    #name: Build & Deploy to ECS
+    #name: Update ECS Service
     #needs: deploy_to_ecr
     #runs-on: ubuntu-latest
     #environment: dev
