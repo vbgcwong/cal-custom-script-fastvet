@@ -5,5 +5,3 @@ dist
 husky
 uploads/*
 .vscode
-prod
-releases
