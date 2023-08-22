@@ -7,8 +7,8 @@ describe("EnvConstants.SERVER_PORT unit test", () => {
     expect(EnvConstants).toHaveProperty("SERVER_PORT");
   });
 
-  it("should be port 5000", () => {
-    expect(EnvConstants.SERVER_PORT).toEqual(5000);
+  it("should be port 6000", () => {
+    expect(EnvConstants.SERVER_PORT).toEqual(6000);
   });
 });
 
