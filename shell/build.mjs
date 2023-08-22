@@ -3,6 +3,8 @@ import fs from "fs"
 
 const SUCCESS = 0;
 const appEnv = process.argv[2]
+const tagName = process.argv[3]
+const appVersion = process.argv[4]
 const STAGING = "staging"
 const PROD = "prod"
 const DEV = "dev"
@@ -58,6 +60,9 @@ if (shell.exec(`tsc -p ${TEMP_TSCONFIG_JSON}`).code === SUCCESS) {
   shell.echo(`Transpile completed.(${new Date()})`);
 } else {
   shell.echo("Failed to transpile exam builder");
+  if (shell.rm("-r", buildDir).code === SUCCESS) {
+    shell.echo(`Remove ${buildDir}`)
+  }
 }
 
 if (shell.rm("-f", TEMP_TSCONFIG_JSON).code === SUCCESS) {
@@ -70,18 +75,28 @@ if (appEnv === PROD) {
   }
 }
 
+const packageJsonContents = fs.readFileSync(`${buildDir}/package.json`)
+const parsedPackageJsonContents = JSON.parse(packageJsonContents)
+let updatedPackageJsonContents = ""
+
+parsedPackageJsonContents.version = appVersion.toString()
 if (appEnv === PROD) {
-  const packageJsonContents = fs.readFileSync(`${PROD_BUILD_DIR}/package.json`)
-  const parsedPackageJsonContents = JSON.parse(packageJsonContents)
   delete parsedPackageJsonContents.scripts
   delete parsedPackageJsonContents.devDependencies
-  const updatedPackageJsonContents = JSON.stringify(parsedPackageJsonContents, null, 2)
+}
+updatedPackageJsonContents = JSON.stringify(parsedPackageJsonContents, null, 2)
+try {
+  fs.writeFileSync(`${buildDir}/package.json`, updatedPackageJsonContents)
+} catch (e) {
+  shell.echo(`Error updating ${buildDir}/package.json with error ${e}`)
+}
 
-  try {
-    fs.writeFileSync(`${PROD_BUILD_DIR}/package.json`, updatedPackageJsonContents)
-  } catch (e) {
-    shell.echo(`Error updating ${PROD_BUILD_DIR}/package.json with error ${e}`)
-  }
+const updatedTagName = `${tagName}:v${appVersion}`
+
+if (shell.exec(`docker build -f docker/Dockerfile.${appEnv} -t ${updatedTagName} .`).code === SUCCESS) {
+  shell.echo(`Docker image generated: ${updatedTagName}`)
+} else {
+  shell.echo(`Failed to generate the docker image: ${tagName}:v${appVersion}`)
 }
 
 shell.exit(0);
