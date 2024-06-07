@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import {
   // AppearanceProviderFor,
-  PDFDocument
+  PDFDocument, PDFField
   // PDFField,
   // PDFFont,
   // PDFHexString,
@@ -41,7 +41,12 @@ export const labelPdf = async (req: Request, res: Response) => {
     const newPdfDoc = await pdfDoc.copy();
 
     const pdfForm = newPdfDoc.getForm();
-    // const pdfFields: PDFField[] = pdfForm.getFields();
+    const pdfFields: PDFField[] = pdfForm.getFields();
+    console.log("🚀 ~ file: label-pdf.ts:45 ~ pdfFields:", pdfFields)
+
+    pdfFields.forEach(field => {
+      console.log(field.getName()) 
+    })
 
     // const radioToBeRecreated: {
     //   radioFieldName: string;
@@ -254,8 +259,8 @@ export const labelPdf = async (req: Request, res: Response) => {
     //   }
     // });
 
-    const pdfBytes = await newPdfDoc.save();
-    await writeFile(filePath, pdfBytes);
+    // const pdfBytes = await newPdfDoc.save();
+    // await writeFile(filePath, pdfBytes);
 
     sendGoodResponse(res, 200, "PDF labelled and returned success");
   } catch (e: any) {

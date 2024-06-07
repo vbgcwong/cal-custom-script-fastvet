@@ -13,11 +13,15 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (_: Request, file: Express.Multer.File, callback: FileFilterCallback): void => {
-  if (file.mimetype !== "application/pdf") {
-    callback(new Error("PDF file format only!"));
-  } else {
+  // if (file.mimetype !== "application/pdf") {
+  //   callback(new Error("PDF file format only!"));
+  // } else {
     callback(null, true);
-  }
+  // }
 };
 
 export const upload = multer({ storage: storage, fileFilter: fileFilter });
+
+const memoryStorage = multer.memoryStorage()
+
+export const uploadMemory = multer({storage: memoryStorage, fileFilter: fileFilter})

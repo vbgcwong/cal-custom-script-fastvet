@@ -1,0 +1,1232 @@
+{
+  "_id": {
+    "$oid": "66561fb94f42283c937417e0"
+  },
+  "isPreviousVersion": true,
+  "isPartialUploaded": false,
+  "patient": "5efec408-f5e0-11ee-8f4c-0269333daa7d",
+  "patientName": "Joseph Arias",
+  "questions": [
+    {
+      "question": "How is Joseph Arias being evaluated today?",
+      "sub": "",
+      "type": "radio",
+      "telehealth": "form1[0].SubForm_Page1[0].SubForm_Page1[0].Public2507Questions[0].HowExamCOnducted[0]",
+      "show": true,
+      "section": {
+        "page": "1",
+        "title": "Disability Benefits Questionnaire",
+        "number": ""
+      },
+      "questions": [
+        {
+          "label": "How was the examination conducted?",
+          "title": "",
+          "subMain": "",
+          "sub": "",
+          "radioGroup": "form1[0].SubForm_Page1[0].SubForm_Page1[0].Public2507Questions[0].RadioButtonList[2]",
+          "options": [
+            {
+              "main": "In-Person Exam",
+              "dbqName": "1",
+              "sub": ""
+            },
+            {
+              "main": "Video Telehealth",
+              "dbqName": "2",
+              "sub": ""
+            }
+          ],
+          "answer": "In-Person Exam"
+        }
+      ]
+    },
+    {
+      "question": "Is Joseph Arias regularly seen as a patient in your clinic?",
+      "sub": "",
+      "type": "yesno",
+      "show": true,
+      "section": {
+        "page": "1",
+        "title": "Disability Benefits Questionnaire",
+        "number": "0"
+      },
+      "presidence": "Yes",
+      "radioGroup": "form1[0].SubForm_Page1[0].SubForm_Page1[0].Public2507Questions[0].RadioButtonList[1]",
+      "ref": 0,
+      "dbqName_yes": "1",
+      "dbqName_no": "2",
+      "answer": "No",
+      "textarea": false
+    },
+    {
+      "question": "Did you review any of the patients records for this condition?",
+      "sub": "",
+      "type": "yesno",
+      "show": true,
+      "section": {
+        "page": "1",
+        "title": "EVIDENCE REVIEW",
+        "number": "0"
+      },
+      "presidence": "Yes",
+      "radioGroup": "form1[0].SubForm_Page1[0].SubForm_Page1[0].PublicEvidenceReview[0].RadioButtonList[0]",
+      "ref": 0,
+      "dbqName_yes": "2",
+      "dbqName_no": "1",
+      "answer": "No",
+      "istext": true,
+      "textarea": false,
+      "placeholder": "Please identify the evidence reviewed and the date range",
+      "textdbqName": "form1[0].SubForm_Page1[0].SubForm_Page1[0].PublicEvidenceReview[0].IdentifyEvidence[0]",
+      "textanswer": "",
+      "maxLength": 3000
+    },
+    {
+      "question": "Has Joseph Arias undergone non-surgical treatment for plantar fasciitis?",
+      "sub": "If yes, indicate side affected (next page)",
+      "type": "yesnoouter",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "outer_ref": 3,
+      "presidence": "Yes",
+      "cols": 2,
+      "section": {
+        "page": "5",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4A"
+      },
+      "dbqName_yes": "form1[0].SubForm_Page5[0].DBQ4a620[1]",
+      "dbqName_no": "form1[0].SubForm_Page5[0].DBQ4a620[0]",
+      "answer": "No"
+    },
+    {
+      "question": "Indicate which side(s) undergone the non-surgical treatment for plantar fasciitis",
+      "sub": "",
+      "type": "checkbox",
+      "multi": false,
+      "small": true,
+      "show": false,
+      "cols": 2,
+      "section": {
+        "page": "5",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4A"
+      },
+      "questions": [
+        {
+          "main": "Right",
+          "dbqName": "form1[0].SubForm_Page5[0].rte4a2[1]",
+          "answer": ""
+        },
+        {
+          "main": "Left",
+          "dbqName": "form1[0].SubForm_Page5[0].lft4a2[1]",
+          "answer": ""
+        },
+        {
+          "main": "Both",
+          "dbqName": "form1[0].SubForm_Page5[0].bth4a2[1]",
+          "answer": ""
+        }
+      ],
+      "answer": "Right"
+    },
+    {
+      "question": "Did the non-surgical treatment relieve the symptoms?",
+      "sub": "If no, which side(s)",
+      "type": "yesnoouter",
+      "multi": false,
+      "small": true,
+      "show": false,
+      "outer_ref": 1,
+      "presidence": "No",
+      "cols": 2,
+      "noDefault": true,
+      "section": {
+        "page": "5",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4B"
+      },
+      "dbqName_yes": "form1[0].SubForm_Page5[0].DBQ4a[1]",
+      "dbqName_no": "form1[0].SubForm_Page5[0].DBQ4a[0]",
+      "answer": "No"
+    },
+    {
+      "question": "Indicate which side(s) not being relieved after the non-surgical treatment",
+      "sub": "",
+      "type": "checkbox",
+      "multi": false,
+      "small": true,
+      "show": false,
+      "cols": 2,
+      "section": {
+        "page": "5",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4B"
+      },
+      "questions": [
+        {
+          "main": "Right",
+          "dbqName": "form1[0].SubForm_Page5[0].rte4a2[0]",
+          "answer": ""
+        },
+        {
+          "main": "Left",
+          "dbqName": "form1[0].SubForm_Page5[0].lft4a2[0]",
+          "answer": ""
+        },
+        {
+          "main": "Both",
+          "dbqName": "form1[0].SubForm_Page5[0].bth4a2[0]",
+          "answer": ""
+        }
+      ],
+      "answer": "Right"
+    },
+    {
+      "question": "Has Joseph Arias undergone surgical treatment for plantar fasciitis?",
+      "sub": "If yes, which side(s)",
+      "type": "yesnoouter",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "outer_ref": 2,
+      "presidence": "Yes",
+      "cols": 2,
+      "section": {
+        "page": "6",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4C"
+      },
+      "dbqName_yes": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].DBQ4c162[1]",
+      "dbqName_no": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].DBQ4c162[0]",
+      "answer": "No"
+    },
+    {
+      "question": "Indicate which side(s) undergone the surgical treatment for plantar fasciitis",
+      "sub": "",
+      "type": "checkbox",
+      "multi": false,
+      "small": true,
+      "show": false,
+      "cols": 2,
+      "section": {
+        "page": "6",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4C"
+      },
+      "questions": [
+        {
+          "main": "Right",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].rte4a2[0]",
+          "answer": ""
+        },
+        {
+          "main": "Left",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].lft4a2[0]",
+          "answer": ""
+        },
+        {
+          "main": "Both",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].bth4a2[0]",
+          "answer": ""
+        }
+      ],
+      "answer": "Right"
+    },
+    {
+      "question": "Did the surgical treatment relieve the symptoms?",
+      "sub": "If no, which side(s)",
+      "type": "checkbox",
+      "multi": false,
+      "small": true,
+      "show": false,
+      "cols": 2,
+      "section": {
+        "page": "6",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4D"
+      },
+      "questions": [
+        {
+          "main": "Yes",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].DBQ4b[1]",
+          "answer": ""
+        },
+        {
+          "main": "No",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].DBQ4b[0]",
+          "answer": "",
+          "multi": false,
+          "subAnswer": "",
+          "textarea": false,
+          "showSubItems": false,
+          "subItems": [
+            {
+              "main": "Right",
+              "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].rte4a223[0]",
+              "answer": ""
+            },
+            {
+              "main": "Left",
+              "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].lft4a223[0]",
+              "answer": ""
+            },
+            {
+              "main": "Both",
+              "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].bth4a223[0]",
+              "answer": ""
+            }
+          ]
+        }
+      ],
+      "answer": "Yes"
+    },
+    {
+      "question": "If the veteran has not undergone surgical treatment, was the Veteran recommended for surgical intervention, but was not a surgical candidate?",
+      "sub": "If yes, which side(s)",
+      "type": "checkbox",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "cols": 2,
+      "section": {
+        "page": "6",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4E"
+      },
+      "questions": [
+        {
+          "main": "Yes",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].DBQ4e420[1]",
+          "answer": "",
+          "multi": false,
+          "subAnswer": "",
+          "textarea": false,
+          "showSubItems": false,
+          "subItems": [
+            {
+              "main": "Right",
+              "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].rte4a223[1]",
+              "answer": ""
+            },
+            {
+              "main": "Left",
+              "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].lft4a223[1]",
+              "answer": ""
+            },
+            {
+              "main": "Both",
+              "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].bth4a223[1]",
+              "answer": ""
+            }
+          ]
+        },
+        {
+          "main": "No",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].DBQ4e420[0]",
+          "answer": ""
+        }
+      ],
+      "answer": "No"
+    },
+    {
+      "question": "Does Joseph Arias have any functional loss of the foot/feet due to plantar fasciitis?",
+      "sub": "If yes indicate sides and describe",
+      "type": "radioTiles",
+      "multi": false,
+      "show": true,
+      "textarea": false,
+      "small": true,
+      "cols": 2,
+      "section": {
+        "page": "6",
+        "title": "PLANTAR FASCIITIS",
+        "number": "4F"
+      },
+      "questions": [
+        {
+          "main": "Right side",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].DBQ4c[1],form1[0].SubForm_Page6[0].SubForm_Page6\\\.5[0].rte4a2233[0]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].describelower4c[0]",
+          "placeholder": "Please describe",
+          "textAnswer": "",
+          "maxLength": 1200
+        },
+        {
+          "main": "Left side",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].DBQ4c[1],form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].lft4a2233[0]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].describelower4c[0]",
+          "placeholder": "Please describe",
+          "textAnswer": "",
+          "maxLength": 1200
+        },
+        {
+          "main": "Both sides",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].DBQ4c[1],form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].bth4a2233[0]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].describelower4c[0]",
+          "placeholder": "Please describe",
+          "textAnswer": "",
+          "maxLength": 1200
+        },
+        {
+          "main": "No functional loss observed",
+          "dbqName": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].DBQ4c[0]",
+          "answer": ""
+        }
+      ],
+      "answer": "form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].DBQ4c[1],form1[0].SubForm_Page6[0].SubForm_Page6\\.5[0].rte4a2233[0]",
+      "textAnswer": "limited range of motion, driving, dorsiflexion, walking,standing "
+    },
+    {
+      "question": "Is there pain on physical exam (Right foot)",
+      "sub": "",
+      "redHeading": "(Right foot)",
+      "type": "radioTiles",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "ref": 1,
+      "presidence": "Yes",
+      "section": {
+        "page": "10",
+        "title": "PAIN",
+        "number": "13"
+      },
+      "questions": [
+        {
+          "main": "Yes",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Right_Painful[0]",
+          "answer": ""
+        },
+        {
+          "main": "No",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Right_Painful[1]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].pain_rationale_right[0]",
+          "placeholder": "The veteran reported pain in his/her medical history, please provide rationale",
+          "textAnswer": "",
+          "maxLength": 160
+        }
+      ],
+      "answer": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Right_Painful[0]",
+      "textAnswer": ""
+    },
+    {
+      "question": "Does the pain contribute to functional loss? Skip if you answered No in the previous question (Right foot).",
+      "sub": "",
+      "redHeading": "(Right foot)",
+      "optional": true,
+      "type": "radioTiles",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "section": {
+        "page": "10",
+        "title": "PAIN",
+        "number": "13"
+      },
+      "questions": [
+        {
+          "main": "Yes",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Right_FunctionalLoss[0]",
+          "answer": ""
+        },
+        {
+          "main": "No",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Right_FunctionalLoss[1]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Explain[1]",
+          "placeholder": "Explain why the pain does not contribute to functional loss or additional limitation",
+          "textAnswer": "",
+          "maxLength": 270
+        },
+        {
+          "main": "Skip",
+          "dbqName": "pass_this_question",
+          "answer": ""
+        }
+      ],
+      "answer": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Right_FunctionalLoss[0]",
+      "textAnswer": ""
+    },
+    {
+      "question": "Is there pain on physical exam (Left foot)",
+      "redHeading": "(Left foot)",
+      "sub": "",
+      "type": "radioTiles",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "ref": 1,
+      "presidence": "Yes",
+      "section": {
+        "page": "10",
+        "title": "PAIN",
+        "number": "13"
+      },
+      "questions": [
+        {
+          "main": "Yes",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Left_Painful[0]",
+          "answer": ""
+        },
+        {
+          "main": "No",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Left_Painful[1]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].pain_rationale_left[0]",
+          "placeholder": "The veteran reported pain in his/her medical history, please provide rationale",
+          "textAnswer": "",
+          "maxLength": 160
+        }
+      ],
+      "answer": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Left_Painful[0]",
+      "textAnswer": ""
+    },
+    {
+      "question": "Does the pain contribute to functional loss? Skip if you answered No in the previous question (Left foot).",
+      "sub": "",
+      "redHeading": "(Left foot)",
+      "optional": true,
+      "type": "radioTiles",
+      "multi": false,
+      "small": true,
+      "show": true,
+      "section": {
+        "page": "10",
+        "title": "PAIN",
+        "number": "13"
+      },
+      "questions": [
+        {
+          "main": "Yes",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Left_FunctionalLoss[0]",
+          "answer": ""
+        },
+        {
+          "main": "No",
+          "dbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Left_FunctionalLoss[1]",
+          "answer": "",
+          "textarea": true,
+          "textdbqName": "form1[0].SubForm_Page10[0].SubForm_Page10[0].SubForm_Page10\\.5[0].Explain[0]",
+          "placeholder": "Explain why the pain does not contribute to functional loss or additional limitation",
+          "textAnswer": "",
+          "maxLength": 270
+        },
+        {
+          "main": "Skip",
+          "dbqName": "pass_this_question",
+          "answer": ""
+        }
+      ],
+      "answer": "pass_this_question",
+      "textAnswer": ""
+    },
+    {
+      "question": "Is there evidence of pain on any of the following?",
+      "sub": "Passive motion, Active motion, Weight-bearing, Nonweight-bearing, On rest/non-movement",
+      "type": "yesnoouter",
+      "outer_ref": 3,
+      "presidence": "Yes",
+      "section": {
+        "page": "12",
+        "title": "FUNCTIONAL LOSS",
+        "number": "14D"
+      },
+      "dbqName_yes": "pass_this_question",
+      "dbqName_no": "pass_this_question",
+      "multi": true,
+      "small": true,
+      "show": true,
+      "answer": "Yes"
+    },
+    {
+      "question": "Is there evidence of pain on any of the following?",
+      "identifier": "functional-loss-from-pain",
+      "sub": "",
+      "type": "checkbox",
+      "multi": true,
+      "partial": true,
+      "show": true,
+      "small": true,
+      "cols": 2,
+      "section": {
+        "page": "12",
+        "title": "FUNCTIONAL LOSS",
+        "number": "14D"
+      },
+      "questions": [
+        {
+          "main": "Passive motion",
+          "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].Pain14D5[0]",
+          "partialField": true,
+          "answer": "Passive motion",
+          "subAnswer": "Right foot",
+          "showSubItems": true,
+          "subItems": [
+            {
+              "main": "Right foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D5[1]",
+              "answer": ""
+            },
+            {
+              "main": "Left foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D5[0]",
+              "answer": ""
+            },
+            {
+              "main": "Both feet",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D5[2]",
+              "answer": ""
+            }
+          ]
+        },
+        {
+          "main": "Active motion",
+          "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].Pain14D4[0]",
+          "partialField": true,
+          "answer": "Active motion",
+          "subAnswer": "Right foot",
+          "showSubItems": true,
+          "subItems": [
+            {
+              "main": "Right foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D4[1]",
+              "answer": ""
+            },
+            {
+              "main": "Left foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D4[0]",
+              "answer": ""
+            },
+            {
+              "main": "Both feet",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D4[2]",
+              "answer": ""
+            }
+          ]
+        },
+        {
+          "main": "Weight-bearing",
+          "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].Pain14D1[0]",
+          "partialField": true,
+          "answer": "Weight-bearing",
+          "subAnswer": "Right foot",
+          "showSubItems": true,
+          "subItems": [
+            {
+              "main": "Right foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D1[1]",
+              "answer": ""
+            },
+            {
+              "main": "Left foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D1[0]",
+              "answer": ""
+            },
+            {
+              "main": "Both feet",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D1[2]",
+              "answer": ""
+            }
+          ]
+        },
+        {
+          "main": "Nonweight-bearing",
+          "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].Pain14D2[0]",
+          "partialField": true,
+          "answer": "Nonweight-bearing",
+          "subAnswer": "Right foot",
+          "showSubItems": true,
+          "subItems": [
+            {
+              "main": "Right foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D2[1]",
+              "answer": ""
+            },
+            {
+              "main": "Left foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D2[0]",
+              "answer": ""
+            },
+            {
+              "main": "Both feet",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D2[2]",
+              "answer": ""
+            }
+          ]
+        },
+        {
+          "main": "On rest/non-movement",
+          "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].Pain14D3[0]",
+          "partialField": true,
+          "answer": "On rest/non-movement",
+          "subAnswer": "Right foot",
+          "showSubItems": true,
+          "subItems": [
+            {
+              "main": "Right foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D3[1]",
+              "answer": ""
+            },
+            {
+              "main": "Left foot",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D3[0]",
+              "answer": ""
+            },
+            {
+              "main": "Both feet",
+              "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].SideAffected14D3[2]",
+              "answer": ""
+            }
+          ]
+        },
+        {
+          "main": "No",
+          "dbqName": "",
+          "answer": "",
+          "subIdentifier": "noneSelected",
+          "skip": 1
+        }
+      ],
+      "answer": ""
+    },
+    {
+      "question": "Describe the selected evidence of pain from the previous question.",
+      "sub": "",
+      "optional": false,
+      "type": "textarea",
+      "show": true,
+      "section": {
+        "page": "12",
+        "title": "FUNCTIONAL LOSS",
+        "number": "14D"
+      },
+      "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].IfYesDescribe14D1[0]",
+      "placeholder": "Please describe",
+      "answer": "The veteran's ability to walk has been affected sustainably due to the moderate to severe facialitus  foot pain.",
+      "maxLength": 1780
+    },
+    {
+      "question": "If unable to assess, a rationale is required (e.g., the foot is in a cast; the contralateral unclaimed foot is damaged; etc.).",
+      "sub": "",
+      "type": "textarea",
+      "optional": true,
+      "show": true,
+      "section": {
+        "page": "12",
+        "title": "FUNCTIONAL LOSS",
+        "number": "14D"
+      },
+      "dbqName": "form1[0].SubForm_Page12[0].SubForm_Page12[0].IfYesDescribe14D2[0]",
+      "placeholder": "Please describe",
+      "answer": "",
+      "maxLength": 1780
+    },
+    {
+      "question": "Regardless of Joseph Arias's current employment status, do the conditions listed in the diagnosis section impact his/her ability to perform any type of occupational task?",
+      "sub": "Tasks such as standing, walking, lifting, sitting etc.",
+      "type": "yesno",
+      "show": true,
+      "section": {
+        "page": "14",
+        "title": "FUNCTIONAL IMPACT",
+        "number": "19A"
+      },
+      "maxLength": 1070,
+      "presidence": "Yes",
+      "ref": 0,
+      "dbqName_yes": "form1[0].SubForm_Page14[0].SubForm_Page14[0].DBQ19[1]",
+      "dbqName_no": "form1[0].SubForm_Page14[0].SubForm_Page14[0].DBQ19[0]",
+      "answer": "Yes",
+      "istext": true,
+      "textarea": false,
+      "placeholder": "Please describe the impact and how it is related. Provide one of more examples",
+      "textdbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].Comments6[0]",
+      "textanswer": "Vet has issues walking, standing, and sitting during flare-ups.  Feet swell and makes shoe wear uncomfortable. Vet reports severe pain, feeling of pins and needles in feet, and reports pain so uncomfortable that they cannot work causing productivity issues. Vet's feet fall asleep and go numb constantly. ",
+      "hasVeteranResponse": true,
+      "additionalResponse": "",
+      "hasAdditionalResponse": false
+    },
+    {
+      "question": "Additional Comments",
+      "sub": "",
+      "optional": true,
+      "type": "textarea",
+      "maxLength": 1430,
+      "show": true,
+      "section": {
+        "page": "14",
+        "title": "REMARKS",
+        "number": "20A"
+      },
+      "options": [],
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].Comments[0]",
+      "answer": ""
+    }
+  ],
+  "status": "signed",
+  "name": "Pes Planus or Plantar Fasciitis",
+  "user": {
+    "$oid": "65c29bd200c41573a1c7ff67"
+  },
+  "ssn": {
+    "ssn": {
+      "value": "458-69-2013",
+      "dbqName": "form1[0].SubForm_Page1[0].SubForm_Page1[0].SSN[0]"
+    },
+    "examDate": {
+      "value": "",
+      "dbqName": "form1[0].SubForm_Page1[0].SubForm_Page1[0].DateOfExam[0]"
+    },
+    "docName": {
+      "value": "Amy Williams",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[1]"
+    },
+    "docArea": {
+      "value": "General Practice",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[6]"
+    },
+    "docDate": {
+      "value": "",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[7]"
+    },
+    "docNpi": {
+      "value": "1023759966",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[3]"
+    },
+    "docPhone": {
+      "value": "(210) 500-8639",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[2]"
+    },
+    "docLicenseNo": {
+      "value": "TX - 1072620",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[4]"
+    },
+    "docAddress": {
+      "value": "9258 Culebra Rd Ste 122 San Antonio TX 78251 ",
+      "dbqName": "form1[0].SubForm_Page14[0].SubForm_Page14[0].SectionXXI-ExaminersCertSign[0].TextField8[5]"
+    },
+    "diagnosisDate": [
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses1[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR1[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL1[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB1[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis1[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis1[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses10[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR10[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL10[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB10[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis10[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis10[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses2[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR2[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL2[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB2[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis2[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis2[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses3[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR3[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL3[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB3[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis3[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis3[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses4[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR4[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL4[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB4[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis4[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis4[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses5[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR5[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL5[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB5[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis5[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis5[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses6[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR6[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL6[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB6[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis6[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis6[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses7[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR7[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL7[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB7[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis7[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis7[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses8[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR8[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL8[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB8[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis8[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis8[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses9[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR9[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL9[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB9[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis9[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosis9[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses20[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR20[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL20[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB20[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR20[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL20[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses21[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR21[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL21[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB21[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR21[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL21[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses22[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR22[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL22[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB22[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR22[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL22[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses23[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR23[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL23[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB23[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR23[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL23[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses24[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR24[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL24[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB24[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR24[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL24[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses25[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR25[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL25[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB25[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR25[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL25[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses26[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR26[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL26[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB26[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR26[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL26[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses27[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR27[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL27[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB27[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR27[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL27[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses28[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR28[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL28[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB28[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR28[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL28[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses30[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR30[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL30[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB30[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR30[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL30[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses31[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR31[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL31[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB31[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR31[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL31[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses32[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR32[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL32[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB32[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR32[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL32[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses33[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR33[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL33[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB33[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR33[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL33[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses34[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR34[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL34[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB34[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR34[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL34[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses35[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR35[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL35[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB35[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR35[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL35[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses36[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR36[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL36[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB36[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR36[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL36[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses37[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR37[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL37[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB37[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR37[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL37[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses40[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR40[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL40[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB40[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR40[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL40[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses42[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR42[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL42[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB42[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR42[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL42[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses38[1]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR38[1]",
+          "left": "form1[0].SubForm_Page2[0].SideL38[1]",
+          "both": "form1[0].SubForm_Page2[0].SideB38[1]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR38[1]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL38[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses41[1]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR41[1]",
+          "left": "form1[0].SubForm_Page2[0].SideL41[1]",
+          "both": "form1[0].SubForm_Page2[0].SideB41[1]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR41[1]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL41[1]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses38[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR38[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL38[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB38[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR38[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL38[0]"
+        }
+      },
+      {
+        "type": "checkbox",
+        "dbqName": "form1[0].SubForm_Page2[0].Diagnoses41[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].SideR41[0]",
+          "left": "form1[0].SubForm_Page2[0].SideL41[0]",
+          "both": "form1[0].SubForm_Page2[0].SideB41[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisR41[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOfDiagnosisL41[0]"
+        }
+      },
+      {
+        "type": "text",
+        "dbqName": "form1[0].SubForm_Page2[0].DiagnosisOtherText1[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].Other1SideR[0]",
+          "left": "form1[0].SubForm_Page2[0].Other1SideL[0]",
+          "both": "form1[0].SubForm_Page2[0].Other1SideB[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOther1DiagnosisR[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOther1DiagnosisL[0]"
+        }
+      },
+      {
+        "type": "text",
+        "dbqName": "form1[0].SubForm_Page2[0].DiagnosisOtherText2[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].Other2SideR[0]",
+          "left": "form1[0].SubForm_Page2[0].Other2SideL[0]",
+          "both": "form1[0].SubForm_Page2[0].Other2SideB[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOther2DiagnosisR[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOther2DiagnosisL[0]"
+        }
+      },
+      {
+        "type": "text",
+        "dbqName": "form1[0].SubForm_Page2[0].DiagnosisOtherText3[0]",
+        "sides": {
+          "right": "form1[0].SubForm_Page2[0].Other3SideR[0]",
+          "left": "form1[0].SubForm_Page2[0].Other3SideL[0]",
+          "both": "form1[0].SubForm_Page2[0].Other3SideB[0]",
+          "rightDateDbqName": "form1[0].SubForm_Page2[0].DateOther3DiagnosisR[0]",
+          "leftDateDbqName": "form1[0].SubForm_Page2[0].DateOther3DiagnosisL[0]"
+        }
+      }
+    ]
+  },
+  "name_fv": "Planus or Plantar Fasciitis",
+  "apptDt": "2024-05-28",
+  "dbqId": "a9798d00-fb54-11ee-8a64-0269333daa7d",
+  "apptId": "c26a6bc0-19e7-11ef-8e66-0269333daa7d",
+  "createdAt": {
+    "$date": "2024-05-28T18:17:29.138Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-31T16:18:58.256Z"
+  },
+  "__v": 0
+}
